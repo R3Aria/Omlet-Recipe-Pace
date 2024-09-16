@@ -1,0 +1,164 @@
+*{
+    font-family: "Outfit", sans-serif;
+    color: var(--stone-4);
+    line-height: 1.6rem;
+}
+p{
+    font-size: 1rem;
+    color: var(--stone-3);
+    font-weight: 400;
+}
+:root{
+    --mobile: 375px;
+    --stone-1: hsl(30, 54%, 90%);
+    --stone-2: hsl(30, 18%, 87%);
+    --stone-3: hsl(30, 10%, 34%);
+    --stone-4: hsl(24, 5%, 18%);
+    --brown: hsl(14, 45%, 36%);
+    --rose: hsl(332, 51%, 32%);
+    --rose-2: hsl(330, 100%, 98%);
+    --card-width: 45rem;
+}
+.young-serif-regular {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.outfit{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--stone-1);
+    min-height: 100vh;
+}
+h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: "Young Serif", serif;
+    color: var(--stone-4);
+}
+h2{
+    font-family: "Young Serif", serif;
+    font-weight: bolder;
+    color: var(--brown);
+}
+.card{
+    max-width: var(--card-width);
+    min-width: 375px;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+img{
+    /* max-width: calc(var(--card-width) - 1rem); */
+    display: block;
+    max-width: 100%;
+    min-width: 375px;
+    /* max-width: calc(100% - .5rem); */
+
+    border-radius: 1rem;
+}
+.prep{
+    background-color: var(--rose-2);
+    /* max-width: calc(var(--card-width) - 10rem); */
+    padding: 2rem;
+    border-radius: 1rem;
+
+    /* line-height: 2rem; */
+}
+.prep h2{
+    color: var(--rose);
+    font-family: "Outfit", sans-serif;
+    /* line-height: 1rem; */
+}
+.prep ul{
+    list-style: none;
+}
+.prep ul li::before{
+    content: "\2022";
+    margin-right: 1rem;
+    font-weight: 700;
+    color: var(--rose);
+}
+ul{
+    list-style: none;
+}
+ul li::before{
+    content: "\2022";
+    margin-right: 1rem;
+    font-weight: 700;
+    color: var(--brown);
+}
+ol{
+    list-style: none;
+    counter-reset: item;
+}
+ol p{
+    counter-increment: item;
+    display: inline-block;
+}
+strong{
+    color: var(--stone-3);
+}
+ol p::before{
+    content: counter(item)".";
+    position: static;
+    color: var(--brown);
+    font-weight: bold;
+    font-size:medium;
+    /* display: inline-block; */
+    width: 1rem;
+    height: 1rem;
+    padding-right: 1.1rem;
+    margin-left: -2rem;
+    /* padding-left: -1rem; */
+}
+table{
+    width: var(--card-width)
+}
+tr{
+    display: flex;
+    justify-content:space-between;
+    /* margin-left: 2rem; */
+    border-bottom: 1px solid var(--stone-2);
+    padding: 1rem;
+}
+tr:nth-last-child(1){
+    border-bottom: none;
+}
+th{
+    color: var(--rose);
+    margin-left: -5rem;
+}
+td{
+    width: 1rem;
+}
+
+@media(width: 375px){
+    .card{
+        padding: 0;
+        max-width: 375px;
+        border-radius: 0;
+    }
+    img{
+        border-radius: 0;
+    }
+    #main{
+        padding: 1rem;
+    }
+    table{
+    width: calc(375px - 10%);
+    }
+}
